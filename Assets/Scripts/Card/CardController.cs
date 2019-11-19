@@ -36,10 +36,15 @@ public class CardController : MonoBehaviour
         flipCard = true;
     }
 
+    private void OnMouseDown()
+    {
+        Debug.Log("sdsad");
+        FlipCard();
+    }
+
     public void FlipCardUpdate()
     {
         float initalAngle = cardObject.transform.eulerAngles.y;
-        Debug.Log(cardObject.transform.eulerAngles);
         cardObject.transform.Rotate(new Vector3(0, 1, 0) * flipVelocity );
         if(initalAngle < 180 && cardObject.transform.eulerAngles.y > 180)
         {
