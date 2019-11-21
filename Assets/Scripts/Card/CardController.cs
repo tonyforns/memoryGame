@@ -36,10 +36,21 @@ public class CardController : MonoBehaviour
         flipCard = true;
     }
 
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
-        Debug.Log("sdsad");
+      //  FlipCard();
+
+    }
+
+    private void OnMouseUpAsButton()
+    {
         FlipCard();
+
+    }
+    public void OnMouseDown()
+    {
+      //Debug.Log("sdsad");
+       // FlipCard();
     }
 
     public void FlipCardUpdate()
